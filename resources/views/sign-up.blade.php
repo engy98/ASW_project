@@ -13,23 +13,27 @@
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
-
-    <style>
-        body{
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
-<div class="span3 well" style="margin: 50px">
-    <legend>New to WebApp? Sign up!</legend>
-    <form accept-charset="UTF-8" action="" method="post">
-        <input class="span3" name="name" placeholder="Full Name" type="text">
-        <input class="span3" name="username" placeholder="Username" type="text">
-        <input class="span3" name="password" placeholder="Password" type="password">
-        <button class="btn btn-warning" type="submit">Sign up for WebApp</button>
+
+
+<div class="span3">
+    <h2>Sign Up</h2>
+    <form>
+        <label>First Name</label>
+        <input type="text" name="firstname" class="span3">
+        <label>Last Name</label>
+        <input type="text" name="lastname" class="span3">
+        <label>Email Address</label>
+        <input type="email" name="email" class="span3">
+        <label>Username</label>
+        <input type="text" name="username" class="span3">
+        <label>Password</label>
+        <input type="password" name="password" class="span3">
+        <label><input type="checkbox" name="terms"> I agree with the <a href="#">Terms and Conditions</a>.</label>
+        <input type="submit" value="Sign up" class="btn btn-primary pull-right">
+        <div class="clearfix"></div>
     </form>
 </div>
-
 </body>
 </html>

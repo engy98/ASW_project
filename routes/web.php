@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('sign-up');
 });
+
+
+
+Route::prefix('admin')
+    ->group(function (){
+        Route::resource('templates',\App\Http\Controllers\TemplateController::class);
+
+    });
