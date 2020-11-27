@@ -17,8 +17,17 @@ Route::get('/', function () {
     return view('sign-up');
 });
 
+Route::post('register',function (\Illuminate\Http\Request $request){
 
+    $user=new \App\Models\User($request->all());
+    $user->save();
 
+  return redirect('profile/'.$user->id);
+})->name('register');
+
+Route::get('profile/{user}',function (\App\Models\User $user){
+   return view('profile',compact('user'));
+});
 Route::prefix('admin')
     ->group(function (){
         Route::resource('templates',\App\Http\Controllers\TemplateController::class);

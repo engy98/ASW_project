@@ -48,6 +48,7 @@
                     <td>{{$temp->arabic_content}}</td>
                     <td class="text-center">
                         <a class='btn btn-info btn-xs' href="{{route('templates.edit',['template'=>$temp])}}"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                        <a class='btn btn-info btn-xs' href="{{route('templates.show',['template'=>$temp])}}"><span class="glyphicon glyphicon-eye"></span> Show</a>
 {{--
                         <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
 --}}

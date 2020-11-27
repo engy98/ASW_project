@@ -17,9 +17,10 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
+        'username',
         'email',
         'password',
+        'phone',
     ];
 
     /**
@@ -40,4 +41,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function getNotifications(){
+        $signupNotification=\App\Models\Template::find(1);
+        $notifications=[];
+        array_push($notifications,$signupNotification->getFinalContent($this));
+
+
+        return $notifications;
+    }
 }
